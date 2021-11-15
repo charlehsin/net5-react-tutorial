@@ -5,9 +5,13 @@
 This follows the following to create the default template codes.
 - https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/react?view=aspnetcore-5.0&tabs=netcore-cli
 
+You can check the following for more detailed explanations.
+- https://dev.to/packt/creating-spas-using-asp-net-core-and-react-59a0
+
 The folder structure is the following
 - my-new-app \ ClientApp folder: This is the React app. The build output in build folder will be served.
 - my-new-app \ Controllers folder: This has a dummy Web API that the React app can send requests to.
+   - To pass any data from the backend to the frontend, one shoud use the Web API. If the data is needed before the authentication, then one can create an API path without the need for authentication to pass the data that do not need to be protected.
 - my-new-app \ Pages folder: This has some standard ASP.NET Razor pages.
 - my-new-app \ Program.cs: This is the standard ASP.NET file.
 - my-new-app \ Startup.cs: This specifies that this is serving the SPA static files from CilentApp \ build folder. This also sets up the Web API.
